@@ -22,9 +22,9 @@
     <!-- Header with Mobile Menu -->
     <header class="w-full shadow sticky top-0 z-50 bg-white">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-blue-700">Neti Consultancy</h1>
+            <a href="index.html"><h1 class="text-2xl font-bold text-blue-700">Neti Consultancy</h1></a>
             <nav class="hidden md:flex space-x-6 font-medium">
-                <a href="#services" class="hover:text-blue-600">Services</a>
+                <a href="services.html" class="hover:text-blue-600">Services</a>
                 <a href="#about" class="hover:text-blue-600">About</a>
                 <a href="#contact" class="hover:text-blue-600">Contact</a>
             </nav>
@@ -32,7 +32,7 @@
         </div>
         <!-- Mobile Nav -->
         <div id="mobileMenu" class="md:hidden px-4 pb-4 hidden">
-            <a href="#services" class="block py-2 text-blue-700">Services</a>
+            <a href="services.html" class="block py-2 text-blue-700">Services</a>
             <a href="#about" class="block py-2 text-blue-700">About</a>
             <a href="#contact" class="block py-2 text-blue-700">Contact</a>
         </div>
@@ -75,33 +75,38 @@
     <!-- About Section -->
     <section id="about" class="bg-blue-50 py-20 px-6 text-center">
         <div class="max-w-4xl mx-auto" data-aos="fade-up">
-            <h2 class="text-4xl font-bold text-blue-800 mb-4">About Neti Consultancy</h2>
-            <p class="text-lg text-gray-700 leading-relaxed">
-                Neti Consultancy empowers businesses with intelligent strategy, data-driven insights, and digital
-                transformation. With over a decade of experience, we partner with organizations to shape success through
-                innovation and clarity.
+            <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-6">About Neti Consultancy</h2>
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                At <span class="font-semibold text-blue-900">Neti Consultancy</span>, we empower businesses with smart
+                strategy, data-driven decisions, and seamless digital transformation.
+                With 10+ years of industry expertise, we help you unlock growth and innovation by turning complex
+                problems into clear solutions.
             </p>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-blue-700 text-white text-center py-12">
-        <h3 class="text-2xl font-semibold mb-2">Ready to Transform Your Business?</h3>
-        <p class="mb-6">Get in touch with our expert team today.</p>
-        <a href="mailto:contact@neticonsultancy.com"
-            class="bg-white text-blue-700 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition">
-            contact@neticonsultancy.com
-        </a>
+    <section id="contact" class="bg-gradient-to-r from-blue-700 to-blue-800 text-white text-center py-16 px-6">
+        <div class="max-w-3xl mx-auto" data-aos="zoom-in">
+            <h3 class="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Business?</h3>
+            <p class="text-lg mb-8">Connect with our expert team and take the first step towards smarter growth.</p>
+            <a href="mailto:contact@neticonsultancy.com"
+                class="bg-white text-blue-700 font-semibold px-8 py-4 rounded-lg shadow-md hover:bg-gray-100 hover:scale-105 transform transition duration-300">
+                contact@neticonsultancy.com
+            </a>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 text-center py-6 text-sm text-gray-500">
-        &copy; 2025 Neti Consultancy. All rights reserved.
+    <footer class="bg-gray-100 py-6 text-center text-sm text-gray-500 border-t border-gray-200">
+        <p>&copy; 2025 <span class="font-medium text-blue-700">Neti Consultancy</span>. All rights reserved.</p>
     </footer>
+
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <scrip src="assets/js/script.js"></script>
+    <scrip src="assets/js/script.js">
+        </script>
 
         <script>
             // animation on scroll
