@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – Neti Consultancy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        [data-aos] {
+            transition: all 0.6s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- Header with Mobile Menu -->
+    <header class="w-full shadow sticky top-0 z-50 bg-white">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html">
+                <h1 class="text-2xl font-bold text-blue-700">Neti Consultancy</h1>
+            </a>
+            <nav class="hidden md:flex space-x-6 font-medium">
+                <a href="services.html" class="hover:text-blue-600">Services</a>
+                <a href="about.html" class="hover:text-blue-600">About</a>
+                <a href="contact.html" class="hover:text-blue-600">Contact</a>
+            </nav>
+            <button class="md:hidden text-2xl" onclick="toggleMenu()">☰</button>
+        </div>
+        <!-- Mobile Nav -->
+        <div id="mobileMenu" class="md:hidden px-4 pb-4 hidden">
+            <a href="services.html" class="block py-2 text-blue-700">Services</a>
+            <a href="about.html" class="block py-2 text-blue-700">About</a>
+            <a href="contact.html" class="block py-2 text-blue-700">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-700 to-blue-600 py-20 text-white text-center">
+        <h1 class="text-4xl font-bold mb-2" data-aos="fade-down">Contact Neti Consultancy</h1>
+        <p class="text-lg" data-aos="fade-up">Let's build something incredible together. We're here to help!</p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Contact Info -->
+            <div data-aos="fade-right">
+                <h2 class="text-3xl font-bold text-blue-700 mb-6">Reach Us</h2>
+                <p class="text-gray-600 mb-4">Have questions or want to start a project? We’re ready to help!</p>
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 12H8m0 0l4-4m0 4l-4 4"></path>
+                        </svg>
+                        info@neticonsultancy.com
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 10l1.292-1.292a1 1 0 011.416 0L12 15l6.293-6.293a1 1 0 011.414 0L21 10M5 20h14">
+                            </path>
+                        </svg>
+                        204, Skyline Plaza, Ahmedabad, Gujarat
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5h2l3.6 7.59a1 1 0 00.92.41h6.26a1 1 0 00.92-.59L21 4H6"></path>
+                        </svg>
+                        +91 98765 43210
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="bg-white shadow-lg rounded-xl p-8 space-y-6" data-aos="fade-left" id="contactForm">
+                <div class="relative">
+                    <input type="text" id="name" name="name" required
+                        class="peer w-full border-b-2 border-gray-300 py-2 focus:outline-none focus:border-blue-600" />
+                    <label for="name"
+                        class="absolute left-0 top-2 text-gray-500 transition-all peer-focus:-translate-y-6 peer-focus:text-sm peer-focus:text-blue-600">Your
+                        Name</label>
+                </div>
+                <div class="relative">
+                    <input type="email" id="email" name="email" required
+                        class="peer w-full border-b-2 border-gray-300 py-2 focus:outline-none focus:border-blue-600" />
+                    <label for="email"
+                        class="absolute left-0 top-2 text-gray-500 transition-all peer-focus:-translate-y-6 peer-focus:text-sm peer-focus:text-blue-600">Your
+                        Email</label>
+                </div>
+                <div class="relative">
+                    <textarea id="message" name="message" rows="4" required
+                        class="peer w-full border-b-2 border-gray-300 py-2 focus:outline-none focus:border-blue-600 resize-none"></textarea>
+                    <label for="message"
+                        class="absolute left-0 top-2 text-gray-500 transition-all peer-focus:-translate-y-6 peer-focus:text-sm peer-focus:text-blue-600">Your
+                        Message</label>
+                </div>
+                <button type="submit"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-300">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="bg-white py-20" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-10">Why Choose Neti Consultancy?</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+
+                <!-- 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition duration-300" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <div class="mb-4 text-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13 16h-1v-4h-1m1-4h.01M12 20h.01M21 12A9 9 0 103 12a9 9 0 0018 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Expert Guidance</h3>
+                    <p class="text-gray-600">Work with industry experts who tailor the best solutions for your business
+                        growth.</p>
+                </div>
+
+                <!-- 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition duration-300" data-aos="zoom-in"
+                    data-aos-delay="200">
+                    <div class="mb-4 text-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Proven Success</h3>
+                    <p class="text-gray-600">We've helped 100+ clients achieve their consultancy goals with measurable
+                        results.</p>
+                </div>
+
+                <!-- 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition duration-300" data-aos="zoom-in"
+                    data-aos-delay="300">
+                    <div class="mb-4 text-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M20 21v-2a4 4 0 00-3-3.87m-4-2.13a4 4 0 01-4 4H5v4h14v-4m-5-7a4 4 0 100-8 4 4 0 000 8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Human Approach</h3>
+                    <p class="text-gray-600">We prioritize people and relationships — ensuring your satisfaction from
+                        start to finish.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Map -->
+    <section class="bg-white">
+        <iframe class="w-full h-80 filter"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2742.3616840222426!2d-74.38716422450872!3d40.5767419458859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b774fa7d6f0f%3A0x3e5d823c2de7058e!2s2163%20Oak%20Tree%20Rd%20%23204%2C%20Edison%2C%20NJ%2008820!5e1!3m2!1sen!2sus!4v1752078707099!5m2!1sen!2sus"
+            allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-6 text-center text-sm text-gray-500 border-t border-gray-200">
+        <p>&copy; 2025 <span class="font-medium text-blue-700">Neti Consultancy</span>. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+    <!-- AOS init -->
+    <script>
+        AOS.init();
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Thank you! We’ll be in touch shortly.");
+        });
+
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>
