@@ -19,6 +19,10 @@
 
 <body class="bg-white text-gray-800 font-sans">
 
+    <!-- Magical Dual Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
     <!-- Header with Mobile Menu -->
     <header class="w-full shadow sticky top-0 z-50 bg-white">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
@@ -254,6 +258,7 @@
     </footer>
 
 
+
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <scrip src="assets/js/script.js">
@@ -270,6 +275,18 @@
                 const menu = document.getElementById("mobileMenu");
                 menu.classList.toggle("hidden");
             }
+        </script>
+
+        <script>
+            const cursorDot = document.getElementById('cursor-dot');
+            const cursorRing = document.getElementById('cursor-ring');
+
+            document.addEventListener('mousemove', (e) => {
+                const { clientX, clientY } = e;
+
+                cursorDot.style.transform = `translate(${clientX}px, ${clientY}px)`;
+                cursorRing.style.transform = `translate(${clientX - 18}px, ${clientY - 18}px)`;
+            });
         </script>
 </body>
 

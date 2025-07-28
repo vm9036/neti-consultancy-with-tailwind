@@ -17,6 +17,10 @@
 
 <body class="bg-white text-gray-800">
 
+    <!-- Magical Dual Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
     <!-- Header with Mobile Menu -->
     <header class="w-full shadow sticky top-0 z-50 bg-white">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
@@ -58,8 +62,7 @@
                 </p>
             </div>
             <div data-aos="fade-left">
-                <img src="assets/images/target.jpg" alt="Neti Consultancy Team"
-                    class="rounded-xl shadow-lg" />
+                <img src="assets/images/target.jpg" alt="Neti Consultancy Team" class="rounded-xl shadow-lg" />
             </div>
         </div>
     </section>
@@ -70,22 +73,19 @@
             <h2 class="text-3xl font-bold text-blue-700 mb-12" data-aos="fade-up">Our Core Pillars</h2>
             <div class="grid gap-10 md:grid-cols-3">
                 <div data-aos="zoom-in" data-aos-delay="100">
-                    <img src="assets/images/target.jpg"
-                        class="mx-auto mb-4 rounded-full shadow" />
+                    <img src="assets/images/target.jpg" class="mx-auto mb-4 rounded-full shadow" />
                     <h3 class="text-xl font-semibold text-blue-700 mb-2">Our Vision</h3>
                     <p class="text-gray-600">To be a global leader in digital consulting that empowers businesses to
                         thrive in the evolving landscape.</p>
                 </div>
                 <div data-aos="zoom-in" data-aos-delay="200">
-                    <img src="assets/images/target.jpg"
-                        class="mx-auto mb-4 rounded-full shadow" />
+                    <img src="assets/images/target.jpg" class="mx-auto mb-4 rounded-full shadow" />
                     <h3 class="text-xl font-semibold text-blue-700 mb-2">Our Mission</h3>
                     <p class="text-gray-600">To provide data-driven, tech-enabled solutions that drive growth and
                         sustainable transformation.</p>
                 </div>
                 <div data-aos="zoom-in" data-aos-delay="300">
-                    <img src="assets/images/target.jpg"
-                        class="mx-auto mb-4 rounded-full shadow" />
+                    <img src="assets/images/target.jpg" class="mx-auto mb-4 rounded-full shadow" />
                     <h3 class="text-xl font-semibold text-blue-700 mb-2">Our Values</h3>
                     <p class="text-gray-600">Integrity, collaboration, innovation, and a passion for delivering real
                         value to our clients.</p>
@@ -121,8 +121,7 @@
     <!-- Our Process -->
     <section class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-blue-700 mb-12" 
-            >Our Proven Process</h2>
+            <h2 class="text-3xl font-bold text-center text-blue-700 mb-12">Our Proven Process</h2>
             <div class="grid md:grid-cols-4 gap-8 text-center">
                 <div>
                     <div
@@ -180,6 +179,18 @@
             const menu = document.getElementById("mobileMenu");
             menu.classList.toggle("hidden");
         }
+    </script>
+
+    <script>
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorRing = document.getElementById('cursor-ring');
+
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+
+            cursorDot.style.transform = `translate(${clientX}px, ${clientY}px)`;
+            cursorRing.style.transform = `translate(${clientX - 18}px, ${clientY - 18}px)`;
+        });
     </script>
 
 </body>
